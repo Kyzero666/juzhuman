@@ -15,14 +15,14 @@ juzhuman.on('message', function(message) {
       if (!message.content.startsWith(prefix)) return;
       if(cooldown.has(message.author.id)){
         message.delete(0);
-        return message.reply('You have to wait 1 hours to typing another stories.')
+        return message.reply('You have to wait 5 sec to typing another stories.')
       }
       //if(!message.member.hasPermission('ADMINISTRATOR')){
           cooldown.add(message.member.id);
       //  }
         setTimeout(() => {
           cooldown.delete(message.author.id)
-        }, cdsec * 3000000)
+        }, cdsec * 5000)
   });
 
   juzhuman.on('message', function(message) {
