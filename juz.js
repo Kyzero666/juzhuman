@@ -69,4 +69,4 @@ juzhuman.mutes = require ('./mutes.js');
     }
 });
 
-juzhuman.login(process.env.NEXUS_TOKEN);
+juzhuman.login(process.env.JUZ_TOKEN);
